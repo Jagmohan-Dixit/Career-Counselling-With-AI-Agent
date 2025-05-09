@@ -18,7 +18,7 @@ from langchain.llms import HuggingFacePipeline
 import torch
 
 def get_model():
-    model_path = "/home/jagmohan/AI_ML/Models/meta-llama/Llama-3.2-3B-Instruct"
+    model_path = "your path
 
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForCausalLM.from_pretrained(
@@ -35,10 +35,9 @@ def get_model():
 
 async def run_memory_chat():
     
-    os.environ["GROQ_API_KEY"] = "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"
-    # config_file = "/home/jagmohan/AI_ML/AI_Projects/mcp_chat/backend/mcp_severs.json"
+    os.environ["GROQ_API_KEY"] = "your key"
 
-    client = MCPClient.from_config_file(r"D:\Codebase\Projects\Career-Counselling-main\AI_Model\mcp_server.json")
+    client = MCPClient.from_config_file(r"Path to mcp.json")
    
     llm = ChatGroq(model="qwen-qwq-32b")
     

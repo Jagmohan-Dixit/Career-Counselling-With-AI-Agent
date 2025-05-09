@@ -17,15 +17,15 @@ load_dotenv()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # It will Execute on Startup(Only code before yield)
-    os.environ["GROQ_API_KEY"] = "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"
+    os.environ["GROQ_API_KEY"] = "your key"
     global agent
-    config_file = r"D:\Codebase\Projects\Career-Counselling-main\AI_Model\mcp_server.json"
+    config_file = r"Path to mcp.json"
     client = MCPClient.from_config_file(config_file)
     print(client)
     llm = ChatGroq(model="qwen-qwq-32b")
     
     # if not os.environ.get("NVIDIA_API_KEY"):
-    #     os.environ["NVIDIA_API_KEY"] = "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"
+    #     os.environ["NVIDIA_API_KEY"] = "your key"
     # llm = init_chat_model("meta/llama3-70b-instruct", model_provider="nvidia")  
         
     agent = MCPAgent(
