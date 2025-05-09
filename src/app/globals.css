@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: rgb(111, 230, 246);
+    --foreground: rgb(26, 35, 126);
+    --card: rgb(255, 255, 255);
+    --card-foreground: rgb(26, 35, 126);
+    --popover: rgb(255, 255, 255);
+    --popover-foreground: rgb(26, 35, 126);
+    --primary: rgb(26, 35, 126);
+    --primary-foreground: rgb(255, 255, 255);
+    --secondary: rgb(187, 222, 251);
+    --secondary-foreground: rgb(26, 35, 126);
+    --muted: rgb(187, 222, 251);
+    --muted-foreground: rgb(97, 97, 97);
+    --accent: rgb(0, 150, 136);
+    --accent-foreground: rgb(255, 255, 255);
+    --destructive: rgb(244, 67, 54);
+    --destructive-foreground: rgb(255, 255, 255);
+    --border: rgb(204, 204, 204);
+    --input: rgb(241, 243, 245);
+    --ring: rgb(26, 35, 126);
+    --radius: 0.5rem;
+
+    --sidebar-background: rgb(197, 220, 244);
+    --sidebar-foreground: rgb(26, 35, 126);
+    --sidebar-primary: rgb(26, 35, 126);
+    --sidebar-primary-foreground: rgb(255, 255, 255);
+    --sidebar-accent: rgb(229, 236, 240);
+    --sidebar-accent-foreground: rgb(26, 35, 126);
+    --sidebar-border: rgb(204, 204, 204);
+    --sidebar-ring: rgb(26, 35, 126);
+
+    --chart-1: hsl(12, 76%, 61%);
+    --chart-2: hsl(173, 58%, 39%);
+    --chart-3: hsl(197, 37%, 24%);
+    --chart-4: hsl(43, 74%, 66%);
+    --chart-5: hsl(27, 87%, 67%);
+
+    --contact-bg-color: #f9f9f9;
+    --contact-text-color: #333;
+  }
+
+  .dark {
+    --background: rgb(18, 24, 39);
+    --foreground: rgb(222, 226, 230);
+    --card: rgb(30, 35, 50);
+    --card-foreground: rgb(222, 226, 230);
+    --popover: rgb(30, 35, 50);
+    --popover-foreground: rgb(222, 226, 230);
+    --primary: rgb(144, 202, 249);
+    --primary-foreground: rgb(26, 35, 126);
+    --secondary: rgb(45, 50, 65);
+    --secondary-foreground: rgb(222, 226, 230);
+    --muted: rgb(45, 50, 65);
+    --muted-foreground: rgb(173, 181, 189);
+    --accent: rgb(0, 150, 136);
+    --accent-foreground: rgb(222, 226, 230);
+    --destructive: rgb(244, 67, 54);
+    --destructive-foreground: rgb(222, 226, 230);
+    --border: rgb(66, 72, 80);
+    --input: rgb(52, 58, 64);
+    --ring: rgb(144, 202, 249);
+
+    --chart-1: hsl(220, 70%, 50%);
+    --chart-2: hsl(160, 60%, 45%);
+    --chart-3: hsl(30, 80%, 55%);
+    --chart-4: hsl(280, 65%, 60%);
+    --chart-5: hsl(340, 75%, 55%);
+
+    --sidebar-background: rgb(30, 35, 50);
+    --sidebar-foreground: rgb(222, 226, 230);
+    --sidebar-primary: rgb(144, 202, 249);
+    --sidebar-primary-foreground: rgb(26, 35, 126);
+    --sidebar-accent: rgb(52, 58, 64);
+    --sidebar-accent-foreground: rgb(222, 226, 230);
+    --sidebar-border: rgb(66, 72, 80);
+    --sidebar-ring: rgb(144, 202, 249);
+
+    --contact-bg-color: #2d2d2d;
+    --contact-text-color: #fff;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}

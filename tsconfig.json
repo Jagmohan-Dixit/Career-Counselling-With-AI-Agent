@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/store/slices/authSlice.js", "src/store/slices/modeSlice.js", "src/store/slices/profileSlice.js", "src/store/reducer.js", "src/store/store.js", "src/app/page.jsx", "src/app/layout.jsx", "src/components/Footer.js", "src/components/Navbar.jsx", "src/app/login/page.jsx", "src/app/signup/page.jsx", "src/app/components/LoginSignupTemplate.jsx", "src/app/components/Map.jsx", "src/app/components/Section.jsx", "src/app/dashboard/profile/page.jsx", "src/app/college-predictor/page.jsx", "middleware.js", "middleware.js", "src/app/about/page.jsx", "src/app/services/page.jsx", "src/app/contact/page.jsx", "src/app/performance-analysis/page.jsx", "src/app/personalized-recommendations/page.jsx", "src/app/questionnaire/page.jsx", "src/app/settings/page.jsx", "src/app/subscription/page.jsx", "src/app/study-schedule/page.jsx"],
+  "exclude": ["node_modules"]
+}
