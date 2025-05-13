@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   parameters {
-    string(name: 'IMAGE_NAME', defaultValue: 'jagmohandixit/career_docker', description: 'Docker Image Name')
+    string(name: 'IMAGE_NAME', defaultValue: 'jagmohandixit/career_image', description: 'Docker Image Name')
     string(name: 'KUBE_CONFIG_ID', defaultValue: 'kubeconfig-id', description: 'Jenkins credential ID for kubeconfig')
     string(name: 'DOCKERHUB_CREDS_ID', defaultValue: 'dockerhub-creds', description: 'Jenkins credential ID for Docker Hub')
   }
