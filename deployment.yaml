@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: career-app
+  labels:
+    app: career-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: career-app
+  template:
+    metadata:
+      labels:
+        app: career-app
+    spec:
+      containers:
+        - name: career-app
+          image: jagmohandixit/career_image:latest
+          ports:
+            - containerPort: 3000
+            - containerPort: 4000
+            - containerPort: 27017
+          env:
+            - name: NODE_ENV
+              value: "development"
+            - name: MONGO_URI
+              value: "mongodb://host.docker.internal:27017/Counselling"
