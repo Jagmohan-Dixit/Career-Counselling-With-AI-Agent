@@ -14,7 +14,7 @@ COPY package*.json ./
 RUN npm install
 
 # Install server dependencies
-RUN cd server && npm install
+# RUN cd server && npm install
 
 # Copy the rest of the application
 COPY . .
