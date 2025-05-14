@@ -39,12 +39,11 @@ jobs:
 
       - name: Setting up Kubernetes config
         run: |
-          mkdir -p ~/.kube
-          echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
+         echo "${{ secrets.KUBECONFIG_B64 }}" | base64 -d > ~/.kube/config
 
       - name: Deploying to Kubernetes
         env:
-          KUBECONFIG: ${{ secrets.KUBECONFIG }}
+          KUBECONFIG_B64: ${{ secrets.KUBECONFIG_B64 }}
         run: |
           kubectl apply -f deployment.yaml --validate=false
           kubectl apply -f service.yaml --validate=false
