@@ -39,7 +39,8 @@ jobs:
 
       - name: Setting up Kubernetes config
         run: |
-         echo "${{ secrets.KUBECONFIG_B64 }}" | base64 -d > ~/.kube/config
+          mkdir -p ~/.kube
+          echo "${{ secrets.KUBECONFIG_B64 }}" | base64 -d > ~/.kube/config
 
       - name: Deploying to Kubernetes
         env:
